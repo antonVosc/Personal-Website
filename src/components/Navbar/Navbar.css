@@ -1,0 +1,134 @@
+.nav-wrapper {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+}
+
+.nav-content, .nav-content ul, .contact-btn, .menu-btn {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    max-width: 1300px;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 20rem;
+    height: auto;
+    margin-top: -2rem;
+}
+
+.nav-content ul {
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-content li {
+    margin: 0 1.5rem;
+}
+
+
+.menu-item, .contact-btn, .menu-btn {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-item, .contact-btn {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.menu-item {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu-item::before, .contact-btn {
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+}
+
+.menu-item::before {
+    content: " ";
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+}
+
+.menu-item::before, .contact-btn {
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.contact-btn {
+    padding: 0.6rem 2rem;
+    outline: 1.5px solid transparent;
+    border-radius: 0.2rem;
+}
+
+.contact-btn:hover, .menu-btn:hover {
+    color: #a993fe;
+    background: #000;
+}
+
+.contact-btn:hover {
+    outline: 1.5px solid #a993fe;
+}
+
+.menu-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.4rem;
+    background: linear-gradient(90deg, #a993fe 0.13%, #7e61e7 98.87%);
+    line-height: 0;
+    transition: all 0.4s ease;
+    display: none;
+}
+
+.contact-btn, .menu-btn {
+    justify-content: center;
+    border: none;
+}
+
+.menu-btn:hover {
+    border: 1px solid #a993fe;
+}
+
+@media (max-width: 425px) {
+    .logo {
+        width: 10rem;
+        height: auto;
+    }    
+}
+
+@media (max-width: 769px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-content ul {
+        display: none;
+    }
+}
+
+@media (max-width: 1325px) {
+    .nav-wrapper {
+        padding: 0 2rem;
+    }
+}
