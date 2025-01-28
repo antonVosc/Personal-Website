@@ -28,6 +28,7 @@
 .nav-content ul {
     gap: 0.5rem;
     list-style: none;
+    margin-left: auto;
 }
 
 .nav-content li {
