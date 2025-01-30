@@ -21,8 +21,10 @@
 
 .logo {
     width: 20rem;
+    padding: 1.5rem 0;
     height: auto;
     margin-top: -2rem;
+    margin-left: 1rem;
 }
 
 .nav-content ul {

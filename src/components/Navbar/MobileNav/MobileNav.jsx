@@ -9,7 +9,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           <img className="logo" src="./assets/images/logo.png" alt="Logo" />
         </div>
 
-        <div className="purple-space" style={{ backgroundColor: isOpen ? "#342864" : "transparent", position: "absolute", height: "50px", width: "240px", }}></div>
+          <div className="purple-space" style={{ backgroundColor: isOpen ? "#342864" : "transparent", position: "absolute", height: "50px", width: "240px", }}></div>
 
         <div className="mobile-menu-container">
           <ul>

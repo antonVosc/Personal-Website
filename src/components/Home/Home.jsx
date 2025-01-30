@@ -18,7 +18,7 @@ const Home = () => {
             <img src="./assets/images/python-icon.png" width="auto" height="80px" alt="" />
           </div>
           
-          <img src="./assets/images/my-photo.png" width="auto" height="600px" alt="" />
+          <img src="./assets/images/my-photo.jpg" width="30px" height= "auto" alt="" />
         </div>
 
         <div>
