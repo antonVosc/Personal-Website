@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MobileNav.css";
 
-const MobileNav = ({ isOpen, toggleMenu }) => { 
+const MobileNav = ({ isOpen, toggleMenu }) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    setOpenMenu(false);
+  };
+
   return (
     <>
       <div className={`mobile-menu ${ isOpen ? "active" : "" }`} onClick={ toggleMenu }>
@@ -14,11 +26,11 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         <div className="mobile-menu-container">
           <ul>
             <li>
-              <a className="menu-item">Home</a>
+              <a className="menu-item" onClick={() => scrollToSection("home")}>Home</a>
             </li>
 
             <li>
-              <a className="menu-item">Skills</a>
+              <a className="menu-item" onClick={() => scrollToSection("skills")}>Skills</a>
             </li>
 
             <li>

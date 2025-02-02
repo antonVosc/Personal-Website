@@ -1,6 +1,5 @@
 .mobile-menu {
   width: 100vw;
-  height: 100vh;
   display: none;
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -14,18 +13,14 @@
 }
 
 .mobile-menu-container {
-  width: 60vw;
   display: flex;
   background-color: #342864;
   padding: 2rem;
+  height: 100vh;
 }
 
-.mobile-menu, .mobile-menu-container {
-    height: 100vh;
-}
-
-.logo-container {
-    width: 360px;
+.logo-container, .mobile-menu-container {
+    width: 62vw;
 }
 
 .mobile-menu.active {

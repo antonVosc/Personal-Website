@@ -7,6 +7,10 @@
     backdrop-filter: blur(50px);
 }
 
+section {
+    scroll-margin-top: 180px;
+}  
+
 .nav-content, .nav-content ul, .contact-btn, .menu-btn {
     display: flex;
     align-items: center;

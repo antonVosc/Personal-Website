@@ -10,8 +10,8 @@ const App = () => {
       <Navbar />
 
       <div className="container">
-        <Home />
-        <Skills />
+        <section id="home"><Home /></section>
+        <section id="skills"><Skills /></section>
       </div>
     </>
   );

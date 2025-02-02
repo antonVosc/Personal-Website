@@ -8,6 +8,16 @@ const Navbar = () => {
     setOpenMenu(!openMenu);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    setOpenMenu(false);
+  };
+
   return (
     <>
       <MobileNav isOpen={ openMenu } toggleMenu={ toggleMenu } />
@@ -18,11 +28,11 @@ const Navbar = () => {
 
           <ul>
             <li>
-              <a className="menu-item">Home</a>
+              <a className="menu-item" onClick={() => scrollToSection("home")}>Home</a>
             </li>
 
             <li>
-              <a className="menu-item">Skills</a>
+              <a className="menu-item" onClick={() => scrollToSection("skills")}>Skills</a>
             </li>
 
             <li>

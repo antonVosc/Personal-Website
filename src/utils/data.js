@@ -41,21 +41,21 @@ export const SKILLS = [
         icon: "./assets/images/tech_skills.png",
         skills: [
             { skill: "Software Engineering", percentage: "70%" },
-            { skill: "Machine Learning", percentage: "40%" },
-            { skill: "AI", percentage: "20%" },
+            { skill: "OOP", percentage: "70%" },
             { skill: "Data Structures", percentage: "70%" },
             { skill: "Algorithms", percentage: "70%" },
             { skill: "TDD", percentage: "40%" },
-            { skill: "OOP", percentage: "70%" },
+            { skill: "Machine Learning", percentage: "40%" },
+            { skill: "AI", percentage: "20%" },
         ],
     },
     {
         title: "Analytical Skills",
         icon: "./assets/images/an_skills.png",
         skills: [
+            { skill: "User-Centered Design", percentage: "70%" },
             { skill: "Data Analysis", percentage: "60%" },
             { skill: "Project Management", percentage: "40%" },
-            { skill: "User-Centered Design", percentage: "70%" },
         ],
     },
 ];
