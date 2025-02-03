@@ -59,3 +59,21 @@ export const SKILLS = [
         ],
     },
 ];
+
+export const EDUCATION = [
+    {
+        name: "Royal Holloway University of London",
+        date: "September 2021 - July 2024",
+        course: "BSc Computer Science, Bachelors",
+    },
+    {
+        name: "West Herts College",
+        date: "September 2019 - May 2021",
+        course: "BTEC Level 3 Extended Diploma in Computer Science (got D*D*D*)",
+    },
+    {
+        name: "Egerton Rothesay School",
+        date: "September 2015 - July 2019",
+        course: "GCSEs",
+    },
+];

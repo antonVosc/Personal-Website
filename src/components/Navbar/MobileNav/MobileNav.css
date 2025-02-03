@@ -41,7 +41,28 @@
 }
 
 @media (max-width: 769px) {
+  .logo-container, .mobile-menu-container {
+    width: 22rem;
+  }
+
     .mobile-menu {
         display: block;
     }   
+}
+
+@media (max-width: 430px) {
+  .logo-container {
+    width: 350px;
+    height: 100px;
+  }
+
+  .mobile-menu-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 414px) {
+  .logo-container, .mobile-menu-container {
+      width: 13rem;
+  }
 }
