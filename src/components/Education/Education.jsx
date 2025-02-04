@@ -13,6 +13,8 @@ const Education = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 769,
@@ -24,11 +26,31 @@ const Education = () => {
     ],
   };
 
+  const slideLeft = () => {
+    sliderRef.current.slickPause();
+    sliderRef.current.slickPrev();
+    sliderRef.current.slickPlay();
+  };
+
+  const slideRight = () => {
+    sliderRef.current.slickPause();
+    sliderRef.current.slickNext();
+    sliderRef.current.slickPlay();
+  };
+
   return (
     <section className="education-container">
       <h5>Education</h5>
 
       <div className="education-content">
+        <div className="arrow-right" onClick={ slideRight }>
+          <span className="material-symbols-outlined">chevron_right</span>
+        </div>
+
+        <div className="arrow-left" onClick={ slideLeft }>
+          <span className="material-symbols-outlined">chevron_left</span>
+        </div>
+
         <Slider ref={ sliderRef } { ...settings }>
           { EDUCATION.map((item) => (<EducationCard key={ item.title } details={ item } />)) }
         </Slider>

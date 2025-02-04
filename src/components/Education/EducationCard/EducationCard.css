@@ -31,3 +31,17 @@
 .course, .duration {
     font-weight: 400;
 }
+
+@media (max-width: 768px) {
+    .education-card {
+        margin: 0;
+    }
+
+    .education-card h6 {
+        font-size: 0.95rem;
+    }
+
+    .education-card .course {
+        font-size: 0.75rem;
+    }
+}
