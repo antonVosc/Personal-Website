@@ -24,7 +24,7 @@ const Navbar = () => {
 
       <nav className="nav-wrapper">
         <div className="nav-content">
-          <img className={`logo ${openMenu ? 'logo-active' : ''}`} src="./assets/images/logo.png" alt="" />
+          <img className={`logo ${openMenu ? 'logo-active' : ''}`} src="./assets/images/logo.png" alt="" onClick={() => scrollToSection("home")} />
 
           <ul>
             <li>

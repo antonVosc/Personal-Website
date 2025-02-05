@@ -18,10 +18,14 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
     <>
       <div className={`mobile-menu ${ isOpen ? "active" : "" }`} onClick={ toggleMenu }>
         <div className="logo-container" style={{ backgroundColor: isOpen ? "#342864" : "transparent", padding: isOpen ? "1rem" : "0", }}>
-          <img className="logo" src="./assets/images/logo.png" alt="Logo" />
+          <img className="logo" src="./assets/images/logo.png" alt="" onClick={() => scrollToSection("home")} />
         </div>
         
         <div className="mobile-menu-container">
+          <div className="burger-menu">
+            ☰
+          </div>
+
           <ul>
             <li>
               <a className="menu-item" onClick={() => scrollToSection("home")}>Home</a>
