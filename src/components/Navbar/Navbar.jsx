@@ -40,7 +40,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a className="menu-item">Work Experience</a>
+              <a className="menu-item"onClick={() => scrollToSection("work-experience")}>Work Experience</a>
             </li>
 
             <li>

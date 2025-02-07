@@ -22,10 +22,6 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         </div>
         
         <div className="mobile-menu-container">
-          <div className="burger-menu">
-            ☰
-          </div>
-
           <ul>
             <li>
               <a className="menu-item" onClick={() => scrollToSection("home")}>Home</a>
@@ -40,7 +36,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             </li>
 
             <li>
-              <a className="menu-item">Work Experience</a>
+              <a className="menu-item" onClick={() => scrollToSection("work-experience")}>Work Experience</a>
             </li>
 
             <li>

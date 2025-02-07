@@ -9,7 +9,7 @@ const Education = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 100,
+    speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,

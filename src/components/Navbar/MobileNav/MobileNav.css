@@ -19,17 +19,6 @@
   height: 100vh;
 }
 
-.burger-menu {
-  position: absolute;   /* Position relative to the parent */
-  top: 50%;            /* Move to the middle */
-  left: 50%;           /* Move to the center horizontally */
-  transform: translate(-50%, -50%); /* Perfect centering */
-  font-size: 2rem;     /* Adjust size of the burger menu */
-  color: white;        /* Make it visible */
-  cursor: pointer;     /* Add a pointer cursor */
-}
-
-
 .logo-container, .mobile-menu-container {
     width: 62vw;
 }

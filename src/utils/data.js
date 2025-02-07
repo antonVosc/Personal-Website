@@ -77,3 +77,32 @@ export const EDUCATION = [
         course: "GCSEs",
     },
 ];
+
+export const WORK_EXPERIENCE = [
+    {
+        title: "Python Developer",
+        date: "August 2024 - Present",
+        company: "Royal Holloway University, Climate Impacts Research",
+        responsibilities: [
+            "Analysed project key elements for potential optimisation",
+            "Developed and structured data sets and databases",
+        ],
+    },
+    {
+        title: "Python Developer",
+        date: "June 2022 - August 2022",
+        company: "Royal Holloway University, Climate Impacts Research",
+        responsibilities: [
+            "Developed Python scripts to extract and sort data from extensive datasets (100+ years)",
+            "Created a user-friendly dashboard for data visualisation and automated graph generation using NumPy",
+        ],
+    },
+    {
+        title: "Website Maintenance Assistant",
+        date: "June 2020 - August 2020",
+        company: "Total Legacy Care Solicitors",
+        responsibilities: [
+            "Tested, maintained and improved the company website built on Elementor and WordPress",
+        ],
+    },
+];
