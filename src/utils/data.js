@@ -106,3 +106,114 @@ export const WORK_EXPERIENCE = [
         ],
     },
 ];
+
+export const PROJECTS = [
+    {
+        title: "Personal Website",
+        date: "January 2025 - February 2025",
+    },
+    {
+        title: "Weather App",
+        date: "March 2024",
+    },
+    {
+        title: "Telegram Face Swapper",
+        date: "November 2023",
+    },
+    {
+        title: "Spice Mix",
+        date: "December 2021",
+    },
+    {
+        title: "QR Code Reader",
+        date: "November 2021",
+    },
+    {
+        title: "Sound Recognition",
+        date: "November 2021",
+    },
+    {
+        title: "Working with graphs",
+        date: "September 2021 - October 2021",
+    },
+    {
+        title: "Bird Shooting Game",
+        date: "July 2021 - August 2021",
+    },
+    {
+        title: "Mail Client",
+        date: "December 2020 - January 2021",
+    },
+    {
+        title: "Memory Game",
+        date: "November 2020 - December 2020",
+    },
+    {
+        title: "Website Blocker",
+        date: "November 2020",
+    },
+    {
+        title: "Message Encoder",
+        date: "October 2020",
+    },
+    {
+        title: "Typing Speed Test",
+        date: "August 2020",
+    },
+    {
+        title: "Flappy Bird",
+        date: "August 2020",
+    },
+    {
+        title: "Tic Tac Toe",
+        date: "July 2020 - August 2020",
+    },
+    {
+        title: "Lifecycle",
+        date: "July 2020",
+    },
+    {
+        title: "Download Photos",
+        date: "June 2020",
+    },
+    {
+        title: "Countdown",
+        date: "June 2020",
+    },
+    {
+        title: "Photo Selector",
+        date: "May 2020",
+    },
+    {
+        title: "Weather App",
+        date: "April 2020",
+    },
+    {
+        title: "Calculator",
+        date: "April 2020",
+    },
+    {
+        title: "Currency Converter",
+        date: "April 2020",
+    },
+    {
+        title: "Fireworks",
+        date: "March 2020",
+    },
+    {
+        title: "Arkanoid",
+        date: "February 2020 - March 2020, October 2020",
+    },
+    {
+        title: "Ping-Pong",
+        date: "February 2020 - March 2020",
+    },
+    {
+        title: "Bird Shooting Game",
+        date: "January 2020 - March 2020",
+    },
+    {
+        title: "Car Game",
+        date: "December 2019 - January 2020",
+    },
+];
