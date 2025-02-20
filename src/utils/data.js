@@ -111,82 +111,102 @@ export const PROJECTS = [
     {
         title: "Personal Website",
         date: "January 2025 - February 2025",
+        link: "https://github.com/antonVosc/Personal-Website/",
     },
     {
         title: "Weather App",
         date: "March 2024",
+        link: "https://github.com/antonVosc/server-weather-app/",
     },
     {
         title: "Telegram Face Swapper",
         date: "November 2023",
+        link: "https://github.com/antonVosc/TelegramFaceSwapper/",
     },
     {
         title: "Spice Mix",
         date: "December 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/Spice_mix/",
     },
     {
         title: "QR Code Reader",
         date: "November 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/QR/",
     },
     {
         title: "Sound Recognition",
         date: "November 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/Sound_recognition/",
     },
     {
         title: "Working with graphs",
         date: "September 2021 - October 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/Data_analysis/",
     },
     {
         title: "Bird Shooting Game",
         date: "July 2021 - August 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/Bird%20shooting/",
     },
     {
         title: "Mail Client",
         date: "December 2020 - January 2021",
+        link: "https://github.com/antonVosc/publish/tree/master/Mail_client/",
     },
     {
         title: "Memory Game",
         date: "November 2020 - December 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Memory_game/",
     },
     {
         title: "Website Blocker",
         date: "November 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Website_blocker/",
     },
     {
         title: "Message Encoder",
         date: "October 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Secret_message_encoder/",
     },
     {
         title: "Typing Speed Test",
         date: "August 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Typing_speed_test/",
     },
     {
         title: "Flappy Bird",
         date: "August 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Flappy%20bird/"
     },
     {
         title: "Tic Tac Toe",
         date: "July 2020 - August 2020",
+        link: "https://github.com/antonVosc/Tic_Tac_Toe/",
     },
     {
         title: "Lifecycle",
         date: "July 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/life_cycle/",
     },
     {
         title: "Download Photos",
         date: "June 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Dowload_picture_from_url/",
     },
     {
         title: "Countdown",
         date: "June 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/countdown/",
     },
     {
         title: "Photo Selector",
         date: "May 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Select_photos/",
     },
     {
         title: "Weather App",
         date: "April 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Weather",
     },
     {
         title: "Calculator",
