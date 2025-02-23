@@ -6,6 +6,8 @@ import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
 import WorkExperience from "./components/WorkExperience/WorkExperience";
 import Projects from "./components/Projects/Projects";
+import ContactMe from "./components/ContactMe/ContactMe";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,7 +20,10 @@ const App = () => {
         <section id="education"><Education /></section>
         <section id="work-experience"><WorkExperience /></section>
         <section id="projects"><Projects /></section>
+        <section id="contact"><ContactMe /></section>
       </div>
+
+      <Footer />
     </>
   );
 };

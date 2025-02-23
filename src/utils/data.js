@@ -206,34 +206,41 @@ export const PROJECTS = [
     {
         title: "Weather App",
         date: "April 2020",
-        link: "https://github.com/antonVosc/publish/tree/master/GUI/Weather",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Weather/",
     },
     {
         title: "Calculator",
         date: "April 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Calculator/",
     },
     {
         title: "Currency Converter",
         date: "April 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/GUI/Currency_%20converter/",
     },
     {
         title: "Fireworks",
         date: "March 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Fireworks/",
     },
     {
         title: "Arkanoid",
         date: "February 2020 - March 2020, October 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Arkanoid/",
     },
     {
         title: "Ping-Pong",
         date: "February 2020 - March 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Ping-pong/",
     },
     {
-        title: "Bird Shooting Game",
+        title: "Space Wars",
         date: "January 2020 - March 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/space_wars/",
     },
     {
         title: "Car Game",
         date: "December 2019 - January 2020",
+        link: "https://github.com/antonVosc/publish/tree/master/Car_project/",
     },
 ];

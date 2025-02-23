@@ -40,10 +40,10 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             </li>
 
             <li>
-              <a className="menu-item">My Projects</a>
+              <a className="menu-item" onClick={() => scrollToSection("projects")}>My Projects</a>
             </li>
 
-            <button className="contact-btn" onClick={() => { toggleMenu(); }}>
+            <button className="contact-btn" onClick={() => scrollToSection("contact")}>
               Contact Me
             </button>
           </ul>

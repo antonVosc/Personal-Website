@@ -2,13 +2,17 @@ import React from "react";
 import "./ProjectCard.css";
 
 const ProjectCard = ({ details }) => {
-  return (
-    <div className="project-card">
-        <h6>{ details.title }</h6>
+    const handleClick = (url) => {
+        window.location.href = url;
+    }
 
-        <div className="project-duration">{ details.date }</div>
-    </div>
-  );
+    return (
+        <div className="project-card" onClick={ () => handleClick(details.link) }>
+            <h6>{ details.title }</h6>
+
+            <div className="project-duration">{ details.date }</div>
+        </div>
+    );
 };
 
 export default ProjectCard;
