@@ -13,6 +13,10 @@
     filter: blur(225px);
 }
 
+p {
+    font-family: 'Courier New';
+}
+
 .home-container::after {
     top: -4rem;
     left: -2rem;
@@ -40,7 +44,8 @@
 }
 
 .home-content p {
-    width: 80%;
+    text-align: justify;
+    width: 100%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
