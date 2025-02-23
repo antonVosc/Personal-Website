@@ -3,7 +3,7 @@ export const SKILLS = [
         title: "Programming Languages",
         icon: "./assets/images/programming-langs-icon.png",
         skills: [
-            { skill: "Python", percentage: "60%" },
+            { skill: "Python", percentage: "90%" },
             { skill: "HTML", percentage: "60%" },
             { skill: "CSS", percentage: "60%" },
             { skill: "SQL", percentage: "40%" },
