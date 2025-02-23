@@ -14,7 +14,7 @@
 
 .project-duration {
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 400;
     background: rgba(103, 81, 185, 0.5);
     border-radius: 0.3rem;
@@ -22,7 +22,9 @@
     margin-bottom: 1.3rem;
 }
 
-
+.project-card h6, .project-duration {
+    font-family: 'Courier New';
+}
 
 @media (max-width: 768px) {
     .education-card {

@@ -14,7 +14,7 @@
 
 .duration {
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     background: rgba(103, 81, 185, 0.5);
     border-radius: 0.3rem;
     padding: 0.4rem 0.6rem;
@@ -30,6 +30,10 @@
 
 .course, .duration {
     font-weight: 400;
+}
+
+.education-card h6, .duration, .course {
+    font-family: 'Courier New';
 }
 
 @media (max-width: 768px) {
