@@ -17,15 +17,11 @@ const ContactForm = () => {
     e.preventDefault();
     
     const { firstname, lastname, email, message } = formData;
-
-    // Create email subject and body
     const subject = "Contact Form Message";
     const body = `Name: ${firstname} ${lastname}\nEmail: ${email}\n\nMessage: ${message}`;
 
-    // You would typically use an API like Web3Forms or your own backend to send the email.
-    // Web3Forms is already set in your form, so you can keep it, but you must submit it.
-
     const formDataToSend = new FormData();
+
     formDataToSend.append("access_key", "4cbb63f4-e7f9-4978-bada-2dcbe3bbaa66");
     formDataToSend.append("firstname", firstname);
     formDataToSend.append("lastname", lastname);
@@ -40,7 +36,7 @@ const ContactForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert("Message sent successfully!");
+          alert("Thank you for the feedback. The message has been successfully sent!");
         } else {
           alert("Something went wrong, please try again later.");
         }
