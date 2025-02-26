@@ -10,6 +10,10 @@ const Home = () => {
         <p>Junior aspiring Programmer and Developer (specialising in Python). Passionate about gaining hands-on experience in coding and software
         development. Dedicated and passionate about leveraging my skills to contribute effectively to the IT industry while continuously learning
         and growing professionally.</p>
+        
+        <a href="https://github.com/antonVosc/Budget-Tracker" target="_blank" rel="noopener noreferrer">
+          <button className="project-button">Project I currently work on</button>
+        </a>
       </div>
 
       <div className="home-img">

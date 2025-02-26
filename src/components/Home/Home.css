@@ -88,6 +88,33 @@ p {
     transform: translateY(-0.5rem);
 }
 
+.project-button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    transition: all 0.3s ease;
+    padding: 0.6rem 2rem;
+    outline: 1.5px solid transparent;
+    border-radius: 0.2rem;
+    outline: 1.5px solid #a993fe;
+    justify-content: center;
+    border: none;
+}
+
+.project-button:hover {
+    color: #a993fe;
+    background: #000;
+    outline: 1.5px solid #a993fe;
+}
+
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 1025px) {
    .home-content h2 {
     font-size: 3rem;
