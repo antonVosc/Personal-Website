@@ -109,6 +109,11 @@ export const WORK_EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Budget Tracker",
+        date: "February 2025 - Present",
+        link: "https://github.com/antonVosc/Budget-Tracker/",
+    },
+    {
         title: "Personal Website",
         date: "January 2025 - February 2025",
         link: "https://github.com/antonVosc/Personal-Website/",
