@@ -9,8 +9,6 @@ export const SKILLS = [
             { skill: "SQL", percentage: "40%" },
             { skill: "Java", percentage: "40%" },
             { skill: "JavaScript", percentage: "40%" },
-            { skill: "Haskell", percentage: "5%" },
-            { skill: "Scala", percentage: "5%" },
         ],
     },
     {
@@ -28,12 +26,6 @@ export const SKILLS = [
             { skill: "WordPress", percentage: "60%" },
             { skill: "Elementor", percentage: "60%" },
             { skill: "scikit-learn", percentage: "40%" },
-            { skill: "NLTK", percentage: "15%" },
-            { skill: "Spacy", percentage: "5%" },
-            { skill: "Selenium", percentage: "5%" },
-            { skill: "Pygame", percentage: "5%" },
-            { skill: "PyTorch", percentage: "5%" },
-            { skill: "TensorFlow", percentage: "5%" },
         ],
     },
     {
@@ -44,7 +36,6 @@ export const SKILLS = [
             { skill: "OOP", percentage: "70%" },
             { skill: "Data Structures", percentage: "70%" },
             { skill: "Algorithms", percentage: "70%" },
-            { skill: "AI", percentage: "40%" },
             { skill: "TDD", percentage: "40%" },
             { skill: "Machine Learning", percentage: "40%" },
         ],
@@ -55,7 +46,6 @@ export const SKILLS = [
         skills: [
             { skill: "User-Centered Design", percentage: "70%" },
             { skill: "Data Analysis", percentage: "60%" },
-            { skill: "Project Management", percentage: "40%" },
         ],
     },
 ];
@@ -80,29 +70,33 @@ export const EDUCATION = [
 
 export const WORK_EXPERIENCE = [
     {
-        title: "Python Developer",
+        title: "Python Developer (project-based)",
         date: "August 2024 - Present",
         company: "Royal Holloway University, Climate Impacts Research",
         responsibilities: [
-            "Analysed project key elements for potential optimisation",
-            "Developed and structured data sets and databases",
+            "Processed and structured large climate datasets spanning multiple years using Python and Openpyxl library",
+            "Increased data accuracy through the implementation of date annotations and contextual labels, enhancing interpretability and enabling precise climate trend analysis, which has reduced analysis time by 40%, allowing researchers to extract insights from 100+ years of climate data more efficiently",
         ],
     },
     {
-        title: "Python Developer",
+        title: "Python Developer (internship)",
         date: "June 2022 - August 2022",
         company: "Royal Holloway University, Climate Impacts Research",
         responsibilities: [
-            "Developed Python scripts to extract and sort data from extensive datasets (100+ years)",
-            "Created a user-friendly dashboard for data visualisation and automated graph generation using NumPy",
+            "Developed a dynamic dashboard with automated graph generation, reducing manual processing time by 40% and improving data analysis efficiency",
+            "Automated climate data visualisation by implementing graph generation using NumPy, cutting analysis time from 2 hours to 30 minutes and improving research workflows",
         ],
     },
     {
-        title: "Website Maintenance Assistant",
+        title: "Website Maintenance Assistant (project-based)",
         date: "June 2020 - August 2020",
         company: "Total Legacy Care Solicitors",
         responsibilities: [
             "Tested, maintained and improved the company website built on Elementor and WordPress",
+            "Decreased page loading time by 60%, reducing average loading speed from 5s to under 2s, significantly improving user satisfaction",
+            "Improved responsiveness across all devices, cutting layout shift issues by 50%, ensuring a seamless mobile and desktop experience",
+            "Improved website usability by 45% by optimising website speed and responsiveness, fixing broken links, enhancing design consistency, and optimising page structure for seamless navigation, leading to longer session durations, lower bounce rates and smoother user experience",
+            "Enhanced visual coherence, leading to a 25% increase in engagement, as users navigated pages more easily with more consistent formatting and layout",
         ],
     },
 ];

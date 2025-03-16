@@ -9,10 +9,10 @@ function ContactMe() {
         <h5>Contact Me</h5>
 
         <div className="contact-content">
-            <div style={{ flex: 1 }}>
-            <ContactInfoCard iconUrl="./assets/images/linkedin-icon.png" text="LinkedIn" link="http://linkedin.com/in/anton-voshchinskiy-809794277/"/>
-            <ContactInfoCard iconUrl="./assets/images/github-icon.png" text="GitHub" link="https://github.com/antonVosc/" />
-            <ContactInfoCard iconUrl="./assets/images/email-icon.png" link="mailto:anton.vosc@gmail.com" />
+            <div className="contact-info-container">
+              <ContactInfoCard iconUrl="./assets/images/linkedin-icon.png" text="http://linkedin.com/in/anton-voshchinskiy-809794277/" link="http://linkedin.com/in/anton-voshchinskiy-809794277/" />
+              <ContactInfoCard iconUrl="./assets/images/github-icon.png" text="https://github.com/antonVosc/" link="https://github.com/antonVosc/" />
+              <ContactInfoCard iconUrl="./assets/images/email-icon.png" text="anton.vosc@gmail.com" link="mailto:anton.vosc@gmail.com" />
             </div>
 
             <div style={{ flex: 1 }}>

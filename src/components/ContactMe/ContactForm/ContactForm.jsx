@@ -27,8 +27,7 @@ const ContactForm = () => {
     formDataToSend.append("lastname", lastname);
     formDataToSend.append("email", email);
     formDataToSend.append("message", message);
-
-    // Send data to Web3Forms API
+    
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formDataToSend,

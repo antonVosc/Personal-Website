@@ -7,9 +7,9 @@ const Home = () => {
       <div className="home-content">
         <h2>Anton Voshchinskiy</h2>
 
-        <p>Junior aspiring Programmer and Developer (specialising in Python). Passionate about gaining hands-on experience in coding and software
-        development. Dedicated and passionate about leveraging my skills to contribute effectively to the IT industry while continuously learning
-        and growing professionally.</p>
+        <p>Welcome to my website! I am a Developer (specialising in Python) experienced in software development and data processing, with hands-on experience in data analysis and
+          website optimisation. Seeking an entry-level position as Python Developer. Recent graduate from Royal Holloway University of London. Skilled
+          in visualising data and automating tasks using Python.</p>
         
         <a href="https://github.com/antonVosc/Budget-Tracker" target="_blank" rel="noopener noreferrer">
           <button className="project-button">Project I currently work on</button>
@@ -18,33 +18,7 @@ const Home = () => {
 
       <div className="home-img">
         <div>
-          <div className="tech-icon">
-            <img src="./assets/images/python-icon.png" width="auto" height="80px" alt="" />
-          </div>
-          
           <img src="./assets/images/my-photo.jpg" width="30px" height= "auto" alt="" />
-        </div>
-
-        <div>
-          <div className="tech-icon">
-            <img src="./assets/images/java-icon.png" width="auto" height="80px" alt="" />
-          </div>
-          
-          <div className="tech-icon">
-            <img src="./assets/images/html-icon.png" width="auto" height="80px" alt="" />
-          </div>
-
-          <div className="tech-icon">
-            <img src="./assets/images/css-icon.png" width="auto" height="80px" alt="" />
-          </div>
-
-          <div className="tech-icon">
-            <img src="./assets/images/js-icon.png" width="auto" height="80px" alt="" />
-          </div>
-
-          <div className="tech-icon">
-            <img src="./assets/images/sql-icon.png" width="auto" height="80px" alt="" />
-          </div>
         </div>
       </div>
     </section>

@@ -24,3 +24,32 @@
         margin-bottom: 2rem;
     }
 }
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+}
+
+.contact-info-container {
+    display: grid;
+    z-index: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 400px;
+    text-decoration: underline;
+    text-decoration-color: #0000EE;
+}
+
+.contact-info-container .contact-card:nth-child(3) {
+    grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+    .contact-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-container .contact-card:nth-child(3) {
+        grid-column: span 1;
+    }
+}
