@@ -10,8 +10,8 @@ function ContactMe() {
 
         <div className="contact-content">
             <div className="contact-info-container">
-              <ContactInfoCard iconUrl="./assets/images/linkedin-icon.png" text="http://linkedin.com/in/anton-voshchinskiy-809794277/" link="http://linkedin.com/in/anton-voshchinskiy-809794277/" />
-              <ContactInfoCard iconUrl="./assets/images/github-icon.png" text="https://github.com/antonVosc/" link="https://github.com/antonVosc/" />
+              <ContactInfoCard iconUrl="./assets/images/linkedin-icon.png" link="http://linkedin.com/in/anton-voshchinskiy-809794277/" />
+              <ContactInfoCard iconUrl="./assets/images/github-icon.png" link="https://github.com/antonVosc/" />
               <ContactInfoCard iconUrl="./assets/images/email-icon.png" text="anton.vosc@gmail.com" link="mailto:anton.vosc@gmail.com" />
             </div>
 
