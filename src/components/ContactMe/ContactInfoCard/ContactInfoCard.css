@@ -10,6 +10,8 @@
     border-radius: 0.65rem;
     border: 1.5px solid #6751b9;
     padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contact-details-card:nth-child(3) {
@@ -17,10 +19,13 @@
     height: 150px;
 }
 
-.contact-details-card .icon {
+.contact-details-card, .contact-details-card .icon {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contact-details-card .icon {
     border-radius: 0.5rem;
     background: #3d3072;
     padding: 20px;
