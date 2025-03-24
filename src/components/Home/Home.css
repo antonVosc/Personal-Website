@@ -112,7 +112,7 @@ a {
    }
 
    .home-img > div > img {
-    width: 250rem;
+    width: 25rem;
     height: auto;
    }
 }
@@ -123,6 +123,7 @@ a {
     }
 
     .home-img {
+        width: 25rem;
         margin: 2rem 0 2rem 0;
     }
 
