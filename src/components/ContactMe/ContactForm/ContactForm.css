@@ -64,3 +64,23 @@ form button:hover {
         border-radius: 0.3rem;
     }
 }
+
+@media (max-width: 600px) {
+    .contact-form-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 0;
+    }
+    
+    form {
+        width: 100%;
+        text-align: left;
+    }
+    
+    form, .contact-form-content {
+        margin-left: 0;
+    }
+}
