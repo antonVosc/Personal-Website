@@ -27,15 +27,11 @@ const Projects = () => {
   };
 
   const slideLeft = () => {
-    sliderRef.current.slickPause();
     sliderRef.current.slickPrev();
-    sliderRef.current.slickPlay();
   };
 
   const slideRight = () => {
-    sliderRef.current.slickPause();
     sliderRef.current.slickNext();
-    sliderRef.current.slickPlay();
   };
 
   return (
