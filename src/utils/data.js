@@ -103,6 +103,11 @@ export const WORK_EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Facepedia (Social Media App)",
+        date: "April 2025 - Present",
+        link: "https://github.com/antonVosc/facepedia-social-media-app/",
+    },
+    {
         title: "Budget Tracker",
         date: "February 2025 - April 2025",
         link: "https://github.com/antonVosc/Budget-Tracker/",

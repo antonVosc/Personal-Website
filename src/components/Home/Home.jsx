@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { PROJECTS } from "../../utils/data";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
           website optimisation. Seeking an entry-level position as Python Developer. Recent graduate from Royal Holloway University of London. Skilled
           in visualising data and automating tasks using Python.</p>
         
-        <a href="https://github.com/antonVosc/Budget-Tracker" target="_blank" rel="noopener noreferrer">
+        <a href={PROJECTS[0].link} target="_blank" rel="noopener noreferrer">
           <button className="project-button">Project I currently work on</button>
         </a>
       </div>
