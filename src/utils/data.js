@@ -16,7 +16,7 @@ export const SKILLS = [
         icon: "./assets/images/platforms-icon.png",
         skills: [
             { skill: "Jupyter Notebook", percentage: "100%" },
-            { skill: "Numpy", percentage: "95%" },
+            { skill: "NumPy", percentage: "95%" },
             { skill: "Git", percentage: "80%" },
             { skill: "GitHub", percentage: "80%" },
             { skill: "GitLab", percentage: "80%" },
