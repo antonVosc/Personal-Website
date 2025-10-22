@@ -103,9 +103,14 @@ export const WORK_EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Learning Flask",
+        date: "October 2025 - Present",
+        link: "https://github.com/antonVosc/flask-work/",
+    },
+    {
         title: "Fifteen Puzzle",
-        date: "April 2025 - Present",
-        link: "https://github.com/antonVosc/Fifteen-Game",
+        date: "April 2025 - October 2025",
+        link: "https://github.com/antonVosc/Fifteen-Game/",
     },
     {
         title: "Budget Tracker",
