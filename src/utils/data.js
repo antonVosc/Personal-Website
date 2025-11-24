@@ -20,9 +20,11 @@ export const SKILLS = [
             { skill: "Git", percentage: "80%" },
             { skill: "GitHub", percentage: "80%" },
             { skill: "GitLab", percentage: "80%" },
+            { skill: "OpenAI", percentage: "70%" },
             { skill: "Eclipse", percentage: "70%" },
             { skill: "matplotlib", percentage: "70%" },
             { skill: "pandas", percentage: "70%" },
+            { skill: "Django", percentage: "60%" },
             { skill: "WordPress", percentage: "60%" },
             { skill: "Elementor", percentage: "60%" },
             { skill: "scikit-learn", percentage: "40%" },
@@ -38,6 +40,7 @@ export const SKILLS = [
             { skill: "Algorithms", percentage: "70%" },
             { skill: "TDD", percentage: "40%" },
             { skill: "Machine Learning", percentage: "40%" },
+            { skill: "AI", percentage: "30%" },
         ],
     },
     {
@@ -70,8 +73,22 @@ export const EDUCATION = [
 
 export const WORK_EXPERIENCE = [
     {
+        title: "Prompt Engineer",
+        date: "May 2025 - August 2025",
+        company: "Start-up specialising at creating AI-generated media content",
+        responsibilities: [
+            "Developed a service based on Django and OpenAI for automating the creation of SEO optimised articles on the given topic or based on the given text",
+            "Added the possibility to search through already existing articles on the given topic in the system which improves user experience",
+            "Integrated text-checking API platforms for checking text on metrics such as spam, readability, uniquiness"
+            "Applied prompt engineering to improve text generation quality and model response accuracy",
+            "Worked with several versions of OpenAI models (GPT-3.5, GPT-4, etc.), selecting the optimal one for text generation",
+            "Optimised the content generation process, ensuring a balance between SEO requirements and text naturalness",
+            "Increased traffic to rewritten articles by 116%",
+       ],
+    },
+    {
         title: "Python Developer (project-based)",
-        date: "August 2024 - Present",
+        date: "August 2024 - May 2025",
         company: "Royal Holloway University, Climate Impacts Research",
         responsibilities: [
             "Processed and structured large climate datasets spanning multiple years using Python and Openpyxl library",
