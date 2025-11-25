@@ -74,10 +74,10 @@ export const EDUCATION = [
 export const WORK_EXPERIENCE = [
     {
         title: "Prompt Engineer",
-        date: "May 2025 - August 2025",
+        date: "May 2025 - Present",
         company: "Start-up specialising at creating AI-generated media content",
         responsibilities: [
-            "Developed a service based on Django and OpenAI for automating the creation of SEO optimised articles on the given topic or based on the given text",
+            "Developed and maintaining a service based on Django and OpenAI for automating the creation of SEO optimised articles on the given topic or based on the given text",
             "Added the possibility to search through already existing articles on the given topic in the system which improves user experience",
             "Integrated text-checking API platforms for checking text on metrics such as spam, readability, uniquness",
             "Applied prompt engineering to improve text generation quality and model response accuracy",
