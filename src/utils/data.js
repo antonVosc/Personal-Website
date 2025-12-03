@@ -121,7 +121,7 @@ export const WORK_EXPERIENCE = [
 export const PROJECTS = [
     {
         title: "Learning Flask",
-        date: "October 2025 - Present",
+        date: "October 2025 - December 2025",
         link: "https://github.com/antonVosc/flask-work/",
     },
     {
