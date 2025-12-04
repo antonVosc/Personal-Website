@@ -120,6 +120,11 @@ export const WORK_EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Memory Game",
+        date: "December 2025 - Present",
+        link: "https://github.com/antonVosc/memory-game/",
+    },
+    {
         title: "Learning Flask",
         date: "October 2025 - December 2025",
         link: "https://github.com/antonVosc/flask-work/",
