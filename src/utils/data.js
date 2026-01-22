@@ -120,6 +120,11 @@ export const WORK_EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Music Player",
+        date: "January 2026 - Present",
+        link: "https://github.com/antonVosc/music-player/",
+    },
+    {
         title: "Memory Game",
         date: "December 2025 - January 2026",
         link: "https://github.com/antonVosc/memory-game/",
