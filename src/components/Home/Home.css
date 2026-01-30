@@ -27,8 +27,11 @@ p {
     right: 0rem;
 }
 
-.home-container, .home-img {
+.home-container, .home-img, .home-img > div, .project-button {
     display: flex;
+}
+
+.home-container, .home-img, .project-button {
     align-items: center;
 }
 
@@ -53,19 +56,23 @@ p {
 
 .home-img {
     flex-direction: column;
-    gap: 2rem;
     margin-top: 5rem;
 }
 
 .home-img > div {
-    display: flex;
     align-items: flex-end;
-    gap: 2rem;
+}
+
+.home-img, .home-img > div {
+    gap: 23rem;
 }
 
 .home-img > div > img {
     width: 30rem;
     height: auto;
+}
+
+.home-img > div > img, .project-button {
     transition: all 0.3s ease;
 }
 
@@ -73,19 +80,19 @@ p {
     transform: translateY(-0.5rem);
 }
 
+.project-button, .project-button:hover {
+    outline: 1.5px solid #a993fe;
+}
+
 .project-button {
-    display: flex;
-    align-items: center;
     color: #fff;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
     background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
-    transition: all 0.3s ease;
     padding: 0.6rem 2rem;
     outline: 1.5px solid transparent;
     border-radius: 0.2rem;
-    outline: 1.5px solid #a993fe;
     justify-content: center;
     border: none;
 }
@@ -93,7 +100,6 @@ p {
 .project-button:hover {
     color: #a993fe;
     background: #000;
-    outline: 1.5px solid #a993fe;
 }
 
 a {
