@@ -25,11 +25,6 @@
     }
 }
 
-.contact-content {
-    display: flex;
-    gap: 3rem;
-}
-
 .contact-info-container {
     display: grid;
     z-index: 1;
