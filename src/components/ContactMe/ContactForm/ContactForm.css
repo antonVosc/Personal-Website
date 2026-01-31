@@ -1,7 +1,3 @@
-.contact-form-content, form input, form textarea {
-    width: 100%;
-}
-
 form {
     flex-direction: column;
 }
@@ -44,7 +40,7 @@ form, .contact-form-content {
     margin-left: 100px;
 }
 
-form, .contact-form-content, .name-container, form button {
+form, .contact-form-content, .name-container, form button, form input, form textarea {
     width: 100%;
 }
 
