@@ -4,8 +4,11 @@
     gap: 1rem;
 }
 
-.contact-details-card {
+.contact-details-card, .contact-details-card:nth-child(3) {
     height: 150px;
+}
+
+.contact-details-card {
     background: #130f2e;
     border-radius: 0.65rem;
     border: 1.5px solid #6751b9;
@@ -16,7 +19,6 @@
 
 .contact-details-card:nth-child(3) {
     grid-column: 3;
-    height: 150px;
 }
 
 .contact-details-card, .contact-details-card .icon {
