@@ -3,9 +3,33 @@ import "./Home.css";
 import { PROJECTS } from "../../utils/data";
 
 const Home = () => {
+  const STATS = [
+          { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
+          { top: "Projects", value: 20 , suffix: "+", bottom: "Completed" },
+          { top: "People Visited Website", value: 12, bottom: "This Month" },
+          { top: "People Visited Website", value: 41, bottom: "This Year" },
+        ];
+  
   return (
     <section className="home-container">
       <div className="home-content">
+        <div className="counter-row">
+          {STATS.map((item, index) => (
+            <div className="counter-card" key={index}>
+              <span className="counter-top">{item.top}</span>
+        
+              <div className="flip-number">
+                <span>
+                  {item.value}
+                  {item.suffix && <span className="plus">+</span>}
+                </span>
+              </div>
+        
+              <span className="counter-bottom">{item.bottom}</span>
+            </div>
+          ))}
+        </div>
+        
         <h2>Anton Voshchinskiy</h2>
 
         <p>Welcome to my website! I am a Developer (specialising in Python) experienced in software development and data processing, with hands-on experience in data analysis and
