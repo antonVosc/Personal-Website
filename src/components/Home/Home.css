@@ -24,6 +24,12 @@ p {
   flex-wrap: wrap;
 }
 
+.plus {
+  font-size: 1.6rem;
+  vertical-align: top;
+  margin-left: 0.1rem;
+}
+
 .counter-card {
   display: flex;
   flex-direction: column;
