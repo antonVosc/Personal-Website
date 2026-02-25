@@ -6,8 +6,8 @@ const Home = () => {
   const STATS = [
           { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
           { top: "Projects", value: 20 , suffix: "+", bottom: "Completed" },
-          { top: "People Visited Website", value: 26, bottom: "in "+new Date().toLocaleString("en-US", { month: "long" }) },
-          { top: "People Visited Website", value: 55, bottom: "in "+new Date().getFullYear() },
+          { top: "People Visited Website", value: 38, bottom: "in "+new Date().toLocaleString("en-US", { month: "long" }) },
+          { top: "People Visited Website", value: 67, bottom: "in "+new Date().getFullYear() },
         ];
   
   return (
