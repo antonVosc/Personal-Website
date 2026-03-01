@@ -4,7 +4,7 @@ import { PROJECTS } from "../../utils/data";
 
 const Home = () => {
   const today = new Date();
-  const targetDate = today.getDate() >= 5 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
+  const targetDate = today.getDate() >= 4 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
     
   const STATS = [
           { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
