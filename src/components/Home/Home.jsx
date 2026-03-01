@@ -3,10 +3,13 @@ import "./Home.css";
 import { PROJECTS } from "../../utils/data";
 
 const Home = () => {
+  const today = new Date();
+  const targetDate = today.getDate() >= 5 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
+    
   const STATS = [
           { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
           { top: "Projects", value: 20 , suffix: "+", bottom: "Completed" },
-          { top: "People Visited Website", value: 38, bottom: "in "+new Date().toLocaleString("en-US", { month: "long" }) },
+          { top: "People Visited Website", value: 38, bottom: "in "+targetDate.toLocaleString("en-US", { month: "long" }) },
           { top: "People Visited Website", value: 67, bottom: "in "+new Date().getFullYear() },
         ];
   
