@@ -69,40 +69,6 @@ const Home = () => {
   return (
     <section className="home-container">
       <div className="home-content">
-        {/* Dropdown filters */}
-        <div className="filters" style={{ marginBottom: "2rem" }}>
-          <select
-            value={selectedMonthIndex}
-            onChange={(e) => setSelectedMonthIndex(Number(e.target.value))}
-          >
-            {months.map((month, idx) => {
-              // idx must be absolute month index (0-11)
-              const monthIndex =
-                selectedYear === currentYear && idx > today.getMonth()
-                  ? today.getMonth()
-                  : selectedYear === currentYear
-                  ? idx
-                  : idx;
-              return (
-                <option key={month} value={monthIndex}>
-                  {month}
-                </option>
-              );
-            })}
-          </select>
-
-          <select
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(Number(e.target.value))}
-          >
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </div>
-
         <div className="counter-row">
           {STATS.map((item, index) => (
             <div className="counter-card" key={index}>
