@@ -7,24 +7,16 @@ const Home = () => {
   const targetDate = today.getDate() >= 4 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
   const currentYear = today.getFullYear();
   const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
-
-  // State for dropdowns
   const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
   const [selectedMonthIndex, setSelectedMonthIndex] = useState(targetDate.getMonth());
-
-  // Years dropdown
+  
   const years = [];
   for (let year = 2025; year <= currentYear; year++) {
     years.push(year);
   }
+  
+  const months = selectedYear === currentYear ? allMonths.slice(0, today.getMonth() + 1) : allMonths;
 
-  // Months dropdown depending on selected year
-  const months =
-    selectedYear === currentYear
-      ? allMonths.slice(0, today.getMonth() + 1)
-      : allMonths;
-
-  // Example visitor data (month indexes)
   const visitorData = {
     2025: {
       0: 20, // January
@@ -38,23 +30,14 @@ const Home = () => {
       2: 45,
     },
   };
-
-  // Dynamic stats
-  const monthlyVisitors =
-    visitorData[selectedYear]?.[selectedMonthIndex] ?? 0;
-  const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce(
-    (sum, val) => sum + val,
-    0
-  );
+  
+  const monthlyVisitors = visitorData[selectedYear]?.[selectedMonthIndex] ?? 0;
+  const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
 
   const STATS = [
     { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
     { top: "Projects", value: 20, suffix: "+", bottom: "Completed" },
-    {
-      top: "Website Visitors",
-      value: monthlyVisitors,
-      type: "month",
-    },
+    { top: "Website Visitors", value: monthlyVisitors, type: "month", },
     { top: "Website Visitors", value: yearlyVisitors, type: "year", },
   ];
 
@@ -72,23 +55,14 @@ const Home = () => {
                   {item.suffix && <span className="plus">+</span>}
                 </span>
               </div>
-        
-              {/* Inline "in" text with dropdowns */}
+              
               <span className="counter-bottom">
                 in{" "}
                 {item.type === "month" ? (
-                  <select
-                    value={selectedMonthIndex}
-                    onChange={(e) => setSelectedMonthIndex(Number(e.target.value))}
-                    className="inline-dropdown"
-                  >
+                  <select value={selectedMonthIndex} onChange={(e) => setSelectedMonthIndex(Number(e.target.value))} className="inline-dropdown">
                     {months.map((month, idx) => {
-                      const monthIndex =
-                        selectedYear === currentYear && idx > today.getMonth()
-                          ? today.getMonth()
-                          : selectedYear === currentYear
-                          ? idx
-                          : idx;
+                      const monthIndex = selectedYear === currentYear && idx > today.getMonth() ? today.getMonth() : selectedYear === currentYear ? idx : idx;
+                      
                       return (
                         <option key={month} value={monthIndex}>
                           {month}
@@ -97,11 +71,7 @@ const Home = () => {
                     })}
                   </select>
                 ) : item.type === "year" ? (
-                  <select
-                    value={selectedYear}
-                    onChange={(e) => setSelectedYear(Number(e.target.value))}
-                    className="inline-dropdown"
-                  >
+                  <select value={selectedYear} onChange={(e) => setSelectedYear(Number(e.target.value))} className="inline-dropdown">
                     {years.map((year) => (
                       <option key={year} value={year}>
                         {year}
