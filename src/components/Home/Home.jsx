@@ -30,6 +30,7 @@ const Home = () => {
   };
 
   const monthlyVisitors = visitorData[selectedYear]?.[selectedMonth] ?? 0;
+  const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
   
   <div className="filters">
     <select
@@ -54,17 +55,6 @@ const Home = () => {
       ))}
     </select>
   </div>
-
-  const visitorData = {
-    2025: {
-      January: 10,
-      February: 14,
-      March: 15,
-    },
-  };
-  
-  const monthlyVisitors = visitorData[selectedYear]?.[selectedMonth] ?? 0;
-  const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
   
   const STATS = [
           { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
