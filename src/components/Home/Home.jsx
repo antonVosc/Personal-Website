@@ -61,9 +61,9 @@ const Home = () => {
     {
       top: "Website Visitors",
       value: monthlyVisitors,
-      bottom: `in ${allMonths[selectedMonthIndex]}`,
+      type: "month",
     },
-    { top: "Website Visitors", value: yearlyVisitors, bottom: `in ${selectedYear}` },
+    { top: "Website Visitors", value: yearlyVisitors, type: "year", },
   ];
 
   return (
@@ -103,18 +103,57 @@ const Home = () => {
           </select>
         </div>
 
-        {/* Stats cards */}
         <div className="counter-row">
           {STATS.map((item, index) => (
             <div className="counter-card" key={index}>
               <span className="counter-top">{item.top}</span>
+        
               <div className="flip-number">
                 <span>
                   {item.value}
                   {item.suffix && <span className="plus">+</span>}
                 </span>
               </div>
-              <span className="counter-bottom">{item.bottom}</span>
+        
+              {/* Inline "in" text with dropdowns */}
+              <span className="counter-bottom">
+                in{" "}
+                {item.type === "month" ? (
+                  <select
+                    value={selectedMonthIndex}
+                    onChange={(e) => setSelectedMonthIndex(Number(e.target.value))}
+                    className="inline-dropdown"
+                  >
+                    {months.map((month, idx) => {
+                      const monthIndex =
+                        selectedYear === currentYear && idx > today.getMonth()
+                          ? today.getMonth()
+                          : selectedYear === currentYear
+                          ? idx
+                          : idx;
+                      return (
+                        <option key={month} value={monthIndex}>
+                          {month}
+                        </option>
+                      );
+                    })}
+                  </select>
+                ) : item.type === "year" ? (
+                  <select
+                    value={selectedYear}
+                    onChange={(e) => setSelectedYear(Number(e.target.value))}
+                    className="inline-dropdown"
+                  >
+                    {years.map((year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  item.bottom
+                )}
+              </span>
             </div>
           ))}
         </div>
