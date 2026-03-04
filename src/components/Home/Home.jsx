@@ -30,7 +30,10 @@ const Home = () => {
     },
   };
   
-  const monthlyVisitors = visitorData[selectedYear]?.[selectedMonthIndex] ?? 0;
+  const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map((m) => Number(m)) : [];
+  const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0 ? selectedMonthIndex : availableMonths.length > 0 ? availableMonths[0] : 0;
+  
+  const monthlyVisitors = visitorData[selectedYear]?.[effectiveMonthIndex] ?? 0;
   const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
 
   const STATS = [
@@ -58,15 +61,15 @@ const Home = () => {
               <span className="counter-bottom">
                 in{" "}
                 {item.type === "month" ? (
-                  <select value={selectedMonthIndex} onChange={(e) => setSelectedMonthIndex(Number(e.target.value))} className="inline-dropdown">
+                  <select value={effectiveMonthIndex} onChange={(e) => setSelectedMonthIndex(Number(e.target.value))} className="inline-dropdown">
                     {months.map((month, idx) => {
-                      const monthIndex = selectedYear === currentYear && idx > today.getMonth() ? today.getMonth() : selectedYear === currentYear ? idx : idx;
+                      const monthIndex = selectedYear === currentYear && idx > today.getMonth() ? today.getMonth() : idx;
                       
-                      return (
-                        <option key={month} value={monthIndex}>
-                          {month}
-                        </option>
-                      );
+                      return { month, monthIndex };
+                    }).filter(({ monthIndex }) => availableMonths.includes(monthIndex)).map(({ month, monthIndex }) => (
+                      <option key={month} value={monthIndex}>
+                        {month}
+                      </option>
                     })}
                   </select>
                 ) : item.type === "year" ? (
