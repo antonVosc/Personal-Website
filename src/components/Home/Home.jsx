@@ -19,13 +19,12 @@ const Home = () => {
 
   const visitorData = {
     2025: {
-      0: 20, // January
       1: 25,
       2: 40,
       3: 60,
     },
     2026: {
-      0: 15,
+      0: 15, // January
       1: 30,
       2: 45,
     },
