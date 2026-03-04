@@ -4,17 +4,9 @@ import { PROJECTS } from "../../utils/data";
 
 const Home = () => {
   const today = new Date();
-  const targetDate =
-    today.getDate() >= 4
-      ? today
-      : new Date(today.getFullYear(), today.getMonth() - 1);
-
+  const targetDate = today.getDate() >= 4 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
   const currentYear = today.getFullYear();
-
-  // All months
-  const allMonths = Array.from({ length: 12 }, (_, i) =>
-    new Date(0, i).toLocaleString("en-US", { month: "long" })
-  );
+  const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
 
   // State for dropdowns
   const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
