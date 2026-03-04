@@ -30,10 +30,10 @@ const Home = () => {
     },
   };
   
-  const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map((m) => Number(m)) : [];
-  const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0 ? selectedMonthIndex : availableMonths.length > 0 ? availableMonths[0] : 0;
+  const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map(Number) : [];
+  const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0 ? selectedMonthIndex : availableMonths.length > 0 ? availableMonths[0] : null;
   
-  const monthlyVisitors = visitorData[selectedYear]?.[effectiveMonthIndex] ?? 0;
+  const monthlyVisitors = effectiveMonthIndex !== null ? visitorData[selectedYear][effectiveMonthIndex] : null;
   const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
 
   const STATS = [
@@ -61,17 +61,17 @@ const Home = () => {
               <span className="counter-bottom">
                 in{" "}
                 {item.type === "month" ? (
-                  <select value={effectiveMonthIndex} onChange={(e) => setSelectedMonthIndex(Number(e.target.value))} className="inline-dropdown">
-                    {months.map((month, idx) => {
-                      const monthIndex = selectedYear === currentYear && idx > today.getMonth() ? today.getMonth() : idx;
-                      
-                      return { month, monthIndex };
-                    }).filter(({ monthIndex }) => availableMonths.includes(monthIndex)).map(({ month, monthIndex }) => (
-                      <option key={month} value={monthIndex}>
-                        {month}
-                      </option>
-                    })}
-                  </select>
+                  effectiveMonthIndex !== null ? (
+                    <select value={effectiveMonthIndex} onChange={(e) => setSelectedMonthIndex(Number(e.target.value))} className="inline-dropdown">
+                      {availableMonths.map((monthIndex) => (
+                        <option key={monthIndex} value={monthIndex}>
+                          {allMonths[monthIndex]}
+                        </option>
+                      ))}
+                    </select>
+                  ) : (
+                    <span>-</span>
+                  )
                 ) : item.type === "year" ? (
                   <select value={selectedYear} onChange={(e) => setSelectedYear(Number(e.target.value))} className="inline-dropdown">
                     {years.map((year) => (
