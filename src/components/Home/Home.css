@@ -17,6 +17,25 @@ p {
     font-family: 'Courier New';
 }
 
+.inline-dropdown {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: inline;
+  width: auto;
+  margin-left: 0.3rem;
+}
+
+.inline-dropdown option {
+  color: #000;
+  background: #fff;
+}
+
 .counter-row {
   display: flex;
   gap: 2rem;
