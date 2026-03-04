@@ -19,7 +19,6 @@ const Home = () => {
 
   const visitorData = {
     2025: {
-      2: 1,
       3: 12,
       4: 22,
       5: 15,
