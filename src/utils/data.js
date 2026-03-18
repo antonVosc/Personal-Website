@@ -75,7 +75,8 @@ export const WORK_EXPERIENCE = [
     {
         title: "Prompt Engineer",
         date: "May 2025 - Present",
-        company: "Start-up specialising at creating AI-generated media contentt (https://melonaid.co.uk/)",
+        company: "Start-up specialising at creating AI-generated media content (https://melonaid.co.uk/)",
+        link: "https://melonaid.co.uk/",
         responsibilities: [
             "Developed and maintaining a service based on Django and OpenAI for automating the creation of SEO optimised articles on the given topic or based on the given text",
             "Added the possibility to search through already existing articles on the given topic in the system which improves user experience",
