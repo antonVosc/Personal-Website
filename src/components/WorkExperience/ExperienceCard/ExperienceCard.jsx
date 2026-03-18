@@ -6,7 +6,15 @@ const ExperienceCard = ({ details }) => {
     <div className="work-experience-card">
         <h6>{ details.title }</h6>
         <div className="work-duration">{ details.date }</div>
-        <div className="company">{ details.company }</div>
+        <div className="company">
+          {details.link ? (
+            <a href={ details.link } target="_blank" rel="noreferrer">
+              { details.company }
+            </a>
+          ) : (
+            details.company
+          )}
+        </div>
 
         <ul>
             { details.responsibilities.map((item) => (
