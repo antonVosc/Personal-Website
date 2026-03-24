@@ -9,17 +9,15 @@ const Home = () => {
   const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
   const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
   const [selectedMonthIndex, setSelectedMonthIndex] = useState(targetDate.getMonth());
-  
+
   const [displayValues, setDisplayValues] = useState([0, 0, 0, 0]);
   const [isSpinning, setIsSpinning] = useState(true);
   const animFrameRef = useRef(null);
-  
+
   const years = [];
   for (let year = 2025; year <= currentYear; year++) {
     years.push(year);
   }
-  
-  const months = selectedYear === currentYear ? allMonths.slice(0, today.getMonth() + 1) : allMonths;
 
   const visitorData = {
     2025: {
@@ -34,12 +32,12 @@ const Home = () => {
       11: 14,
     },
     2026: {
-      0: 29, // January
+      0: 29,
       1: 65,
       2: 47,
     },
   };
-  
+
   const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map(Number) : [];
   const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0
     ? selectedMonthIndex
@@ -49,7 +47,7 @@ const Home = () => {
   const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
 
   const TARGET_VALUES = [2, 20, monthlyVisitors, yearlyVisitors];
-  
+
   useEffect(() => {
     const SPIN_DURATION = 1500;
     const SETTLE_DURATION = 500;
@@ -62,7 +60,7 @@ const Home = () => {
         Math.floor(Math.random() * Math.max(target * 2, 10))
       ));
     }, TICK_INTERVAL);
-    
+
     const settleTimeout = setTimeout(() => {
       clearInterval(spinInterval);
 
@@ -91,18 +89,15 @@ const Home = () => {
     return () => {
       clearInterval(spinInterval);
       clearTimeout(settleTimeout);
-      
-      if (animFrameRef.current) {
-        cancelAnimationFrame(animFrameRef.current);
-      }
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     };
   }, []);
 
   const STATS = [
     { top: "Years of", value: displayValues[0], suffix: "+", bottom: "Experience" },
     { top: "Projects", value: displayValues[1], suffix: "+", bottom: "Completed" },
-    { top: "Website Visitors", value: displayValues[2], type: "month" },
-    { top: "Website Visitors", value: displayValues[3], type: "year" },
+    { top: "Website Visitors", value: isSpinning ? displayValues[2] : monthlyVisitors, type: "month" },
+    { top: "Website Visitors", value: isSpinning ? displayValues[3] : yearlyVisitors, type: "year" },
   ];
 
   return (
