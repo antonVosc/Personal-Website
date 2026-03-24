@@ -13,7 +13,7 @@
     filter: blur(225px);
 }
 
-p {
+.home-content p {
     font-family: 'Courier New';
 }
 
@@ -85,6 +85,7 @@ p {
   margin: 0.3rem 0;
   overflow: hidden;
   box-shadow: inset 0 0 10px rgba(169, 147, 254, 0.6);
+  transition: box-shadow 0.4s ease;
 }
 
 .flip-number span {
@@ -94,6 +95,25 @@ p {
   color: #a993fe;
   display: inline-block;
   animation: flipGlow 3s infinite;
+}
+
+/* Slot-machine spinning state */
+.flip-number.spinning {
+  box-shadow: inset 0 0 20px rgba(169, 147, 254, 0.9),
+              0 0 12px rgba(126, 97, 231, 0.5);
+}
+
+.flip-number.spinning span {
+  animation: slotSpin 0.08s steps(1, end) infinite;
+  color: #c4b0ff;
+}
+
+@keyframes slotSpin {
+  0%   { transform: translateY(0)    scaleY(1);    filter: blur(0px);   opacity: 1;   }
+  25%  { transform: translateY(-6px) scaleY(0.85); filter: blur(1.5px); opacity: 0.7; }
+  50%  { transform: translateY(0)    scaleY(1.1);  filter: blur(0px);   opacity: 1;   }
+  75%  { transform: translateY(4px)  scaleY(0.9);  filter: blur(1px);   opacity: 0.8; }
+  100% { transform: translateY(0)    scaleY(1);    filter: blur(0px);   opacity: 1;   }
 }
 
 @keyframes flipGlow {
@@ -170,12 +190,9 @@ p {
     transition: all 0.3s ease;
 }
 
-.home-img > div > img:hover, img:hover {
+/* Scoped hover — was previously global (img:hover) */
+.home-img > div > img:hover {
     transform: translateY(-0.5rem);
-}
-
-.project-button, .project-button:hover {
-    outline: 1.5px solid #a993fe;
 }
 
 .project-button {
@@ -189,18 +206,20 @@ p {
     border-radius: 0.2rem;
     justify-content: center;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .project-button:hover {
     color: #a993fe;
     background: #000;
+    outline: 1.5px solid #a993fe;
 }
 
 a {
     text-decoration: none;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
    .home-content h2 {
     font-size: 3rem;
     line-height: 4rem;
@@ -221,6 +240,7 @@ a {
     .counter-row {
       flex-wrap: wrap;
       justify-content: center;
+      gap: 1.5rem;
     }
   
     .counter-card {
@@ -262,11 +282,6 @@ a {
 
     .project-button {
         margin: 1.5rem auto;
-    }
-
-    .counter-row {
-      justify-content: center;
-      gap: 1.5rem;
     }
   
     .flip-number span {
