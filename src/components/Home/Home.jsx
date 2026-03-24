@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { PROJECTS } from "../../utils/data";
 
@@ -9,6 +9,10 @@ const Home = () => {
   const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
   const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
   const [selectedMonthIndex, setSelectedMonthIndex] = useState(targetDate.getMonth());
+  
+  const [displayValues, setDisplayValues] = useState([0, 0, 0, 0]);
+  const [isSpinning, setIsSpinning] = useState(true);
+  const animFrameRef = useRef(null);
   
   const years = [];
   for (let year = 2025; year <= currentYear; year++) {
@@ -37,16 +41,68 @@ const Home = () => {
   };
   
   const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map(Number) : [];
-  const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0 ? selectedMonthIndex : availableMonths.length > 0 ? availableMonths[0] : null;
-  
-  const monthlyVisitors = effectiveMonthIndex !== null ? visitorData[selectedYear][effectiveMonthIndex] : null;
+  const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0
+    ? selectedMonthIndex
+    : availableMonths.length > 0 ? availableMonths[0] : null;
+
+  const monthlyVisitors = effectiveMonthIndex !== null ? visitorData[selectedYear][effectiveMonthIndex] : 0;
   const yearlyVisitors = Object.values(visitorData[selectedYear] || {}).reduce((sum, val) => sum + val, 0);
 
+  const TARGET_VALUES = [2, 20, monthlyVisitors, yearlyVisitors];
+  
+  useEffect(() => {
+    const SPIN_DURATION = 1500;
+    const SETTLE_DURATION = 500;
+    const TICK_INTERVAL = 60;
+
+    let spinInterval = null;
+    
+    spinInterval = setInterval(() => {
+      setDisplayValues(TARGET_VALUES.map((target) =>
+        Math.floor(Math.random() * Math.max(target * 2, 10))
+      ));
+    }, TICK_INTERVAL);
+    
+    const settleTimeout = setTimeout(() => {
+      clearInterval(spinInterval);
+
+      const settleStart = performance.now();
+
+      const animate = (now) => {
+        const elapsed = now - settleStart;
+        const progress = Math.min(elapsed / SETTLE_DURATION, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        setDisplayValues(TARGET_VALUES.map((target) =>
+          Math.round(eased * target)
+        ));
+
+        if (progress < 1) {
+          animFrameRef.current = requestAnimationFrame(animate);
+        } else {
+          setIsSpinning(false);
+          setDisplayValues(TARGET_VALUES);
+        }
+      };
+
+      animFrameRef.current = requestAnimationFrame(animate);
+    }, SPIN_DURATION);
+
+    return () => {
+      clearInterval(spinInterval);
+      clearTimeout(settleTimeout);
+      
+      if (animFrameRef.current) {
+        cancelAnimationFrame(animFrameRef.current);
+      }
+    };
+  }, []);
+
   const STATS = [
-    { top: "Years of", value: 2, suffix: "+", bottom: "Experience" },
-    { top: "Projects", value: 20, suffix: "+", bottom: "Completed" },
-    { top: "Website Visitors", value: monthlyVisitors, type: "month", },
-    { top: "Website Visitors", value: yearlyVisitors, type: "year", },
+    { top: "Years of", value: displayValues[0], suffix: "+", bottom: "Experience" },
+    { top: "Projects", value: displayValues[1], suffix: "+", bottom: "Completed" },
+    { top: "Website Visitors", value: displayValues[2], type: "month" },
+    { top: "Website Visitors", value: displayValues[3], type: "year" },
   ];
 
   return (
@@ -56,18 +112,18 @@ const Home = () => {
           {STATS.map((item, index) => (
             <div className="counter-card" key={index}>
               <span className="counter-top">{item.top}</span>
-        
-              <div className="flip-number">
+
+              <div className={`flip-number${isSpinning ? " spinning" : ""}`}>
                 <span>
                   {item.value}
                   {item.suffix && <span className="plus">+</span>}
                 </span>
               </div>
-              
+
               {index < 2 && item.bottom && (
                 <span className="counter-bottom">{item.bottom}</span>
               )}
-              
+
               {index >= 2 && (item.type === "month" || item.type === "year") && (
                 <span className="counter-bottom">
                   in{" "}
@@ -86,7 +142,12 @@ const Home = () => {
                   ) : item.type === "year" ? (
                     <select
                       value={selectedYear}
-                      onChange={(e) => setSelectedYear(Number(e.target.value))}
+                      onChange={(e) => {
+                        const newYear = Number(e.target.value);
+                        setSelectedYear(newYear);
+                        const newAvailable = Object.keys(visitorData[newYear] || {}).map(Number);
+                        setSelectedMonthIndex(newAvailable[newAvailable.length - 1] ?? 0);
+                      }}
                       className="inline-dropdown"
                     >
                       {years.map((year) => (
