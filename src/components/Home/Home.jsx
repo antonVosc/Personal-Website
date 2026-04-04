@@ -2,33 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { PROJECTS } from "../../utils/data";
 
-const Home = () => {
-  const today = new Date();
-  const targetDate = today.getDate() >= 4 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
-  const currentYear = today.getFullYear();
-  const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
-  const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
-  const getLastMonthIndex = (year) => {
-    const months = Object.keys(visitorData[year] || {}).map(Number);
-    
-    return months.length ? months[months.length - 1] : 0;
-  };
-
-  const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
-  const [selectedMonthIndex, setSelectedMonthIndex] = useState(
-    getLastMonthIndex(targetDate.getFullYear())
-  );
-
-  const [displayValues, setDisplayValues] = useState([0, 0, 0, 0]);
-  const [isSpinning, setIsSpinning] = useState(true);
-  const animFrameRef = useRef(null);
-
-  const years = [];
-  for (let year = 2025; year <= currentYear; year++) {
-    years.push(year);
-  }
-
-  const visitorData = {
+const visitorData = {
     2025: {
       3: 12,
       4: 22,
@@ -46,6 +20,34 @@ const Home = () => {
       2: 62,
     },
   };
+
+const Home = () => {
+  const today = new Date();
+  const targetDate = today.getDate() >= 4 ? today : new Date(today.getFullYear(), today.getMonth() - 1);
+  const currentYear = today.getFullYear();
+  const allMonths = Array.from({ length: 12 }, (_, i) =>
+    new Date(0, i).toLocaleString("en-US", { month: "long" })
+  );
+  
+  const getLastMonthIndex = (year) => {
+    const months = Object.keys(visitorData[year] || {}).map(Number);
+    
+    return months.length ? months[months.length - 1] : 0;
+  };
+
+  const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
+  const [selectedMonthIndex, setSelectedMonthIndex] = useState(
+    () => getLastMonthIndex(targetDate.getFullYear())
+  );
+
+  const [displayValues, setDisplayValues] = useState([0, 0, 0, 0]);
+  const [isSpinning, setIsSpinning] = useState(true);
+  const animFrameRef = useRef(null);
+
+  const years = [];
+  for (let year = 2025; year <= currentYear; year++) {
+    years.push(year);
+  }
 
   const availableMonths = visitorData[selectedYear] ? Object.keys(visitorData[selectedYear]).map(Number) : [];
   const effectiveMonthIndex = availableMonths.includes(selectedMonthIndex) && availableMonths.length > 0
@@ -149,8 +151,7 @@ const Home = () => {
                       onChange={(e) => {
                         const newYear = Number(e.target.value);
                         setSelectedYear(newYear);
-                        const newAvailable = Object.keys(visitorData[newYear] || {}).map(Number);
-                        setSelectedMonthIndex(newAvailable[newAvailable.length - 1] ?? 0);
+                        setSelectedMonthIndex(getLastMonthIndex(newYear));
                       }}
                       className="inline-dropdown"
                     >
