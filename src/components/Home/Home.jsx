@@ -8,7 +8,16 @@ const Home = () => {
   const currentYear = today.getFullYear();
   const allMonths = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString("en-US", { month: "long" }));
   const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
-  const [selectedMonthIndex, setSelectedMonthIndex] = useState(targetDate.getMonth());
+  const getLastMonthIndex = (year) => {
+    const months = Object.keys(visitorData[year] || {}).map(Number);
+    
+    return months.length ? months[months.length - 1] : 0;
+  };
+
+  const [selectedYear, setSelectedYear] = useState(targetDate.getFullYear());
+  const [selectedMonthIndex, setSelectedMonthIndex] = useState(
+    getLastMonthIndex(targetDate.getFullYear())
+  );
 
   const [displayValues, setDisplayValues] = useState([0, 0, 0, 0]);
   const [isSpinning, setIsSpinning] = useState(true);
